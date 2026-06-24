@@ -66,11 +66,31 @@ export const projects = [
       '게시물 좋아요, 댓글·답글',
     ],
     metrics: null,
+    thumbSrc:
+      'https://github.com/user-attachments/assets/cd422907-13f0-44e4-aa40-786b49b23129',
+    heroSrc:
+      'https://github.com/user-attachments/assets/428b5ffe-ac44-4020-abd3-52142f7b90a2',
     gallery: [
-      { slot: 'screenshot-1', caption: '메인 화면' },
-      { slot: 'screenshot-2', caption: '게시판 목록' },
-      { slot: 'screenshot-3', caption: '게시글 상세 · 댓글/대댓글' },
-      { slot: 'screenshot-4', caption: '게시물 작성' },
+      {
+        slot: 'screenshot-1',
+        caption: '게시판 목록',
+        src: 'https://github.com/user-attachments/assets/cd422907-13f0-44e4-aa40-786b49b23129',
+      },
+      {
+        slot: 'screenshot-2',
+        caption: '게시글 상세 · 댓글/대댓글',
+        src: 'https://github.com/user-attachments/assets/428b5ffe-ac44-4020-abd3-52142f7b90a2',
+      },
+      {
+        slot: 'screenshot-3',
+        caption: '게시물 작성',
+        src: 'https://github.com/user-attachments/assets/21705158-b0d3-4ccd-b914-f8deb0e5233d',
+      },
+      {
+        slot: 'screenshot-4',
+        caption: '게시물 수정',
+        src: 'https://github.com/user-attachments/assets/2d3434ef-3a40-4484-b0ad-1e497cee7396',
+      },
     ],
   },
   {

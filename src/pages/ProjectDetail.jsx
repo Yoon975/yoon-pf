@@ -19,6 +19,7 @@ export default function ProjectDetail() {
           slot="hero"
           variant="hero"
           caption={`${project.title} 대표 이미지`}
+          imageSrc={project.heroSrc ?? project.gallery?.[0]?.src ?? null}
         />
 
         <header className="detail__header">
@@ -85,7 +86,9 @@ export default function ProjectDetail() {
 
         <section className="detail__section">
           <h2>스크린샷</h2>
-          <p className="detail__gallery-note">아래 슬롯에 추후 스크린샷을 추가할 수 있습니다.</p>
+          {project.gallery.some((item) => !item.src) && (
+            <p className="detail__gallery-note">아래 슬롯에 추후 스크린샷을 추가할 수 있습니다.</p>
+          )}
           <div className="gallery">
             {project.gallery.map((item) => (
               <ImageSlot

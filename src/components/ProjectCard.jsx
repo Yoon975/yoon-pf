@@ -11,6 +11,7 @@ export default function ProjectCard({ project }) {
           slot="thumb"
           variant="thumb"
           caption={null}
+          imageSrc={project.thumbSrc ?? project.gallery?.[0]?.src ?? null}
         />
       </Link>
       <div className="project-card__body">
