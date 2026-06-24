@@ -53,7 +53,7 @@ export const profile = {
   ],
   learningSkills: {
     context: 'Our Trip',
-    items: ['Python', 'Flask', 'MySQL', 'scikit-learn', 'Jinja2', 'Vanilla JS'],
+    items: ['Flask', 'scikit-learn', 'Jinja2'],
   },
 };
 
