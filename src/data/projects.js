@@ -13,25 +13,65 @@ export const profile = {
     '문제를 분석하고 해결하는 과정에서 개발에 흥미를 느꼈고, 풀스택 개발자로 성장하고 있습니다. Java·Spring·JSP/Servlet과 Python, DB 설계, API 연동 경험을 바탕으로 팀 프로젝트에서 Controller·리뷰·예약·데이터 연동 등 담당 영역을 끝까지 책임지며 구현해 왔습니다. 맡은 일에 최선을 다하고, 협업 속에서 실질적인 결과를 만드는 개발자가 되고자 합니다.',
   trainings: [
     {
+      id: 'lab',
       name: '실무형 AI·SW 인재 육성 Lab 사업',
       org: '한국커리어혁신진흥원',
       period: '2026.06 ~ 진행 중',
       status: '수료중',
       statusType: 'ongoing',
+      detail: {
+        trainingInfo: [
+          { label: '훈련과정명', value: '실무형 AI·SW 인재 육성 Lab 사업' },
+          { label: '훈련기관', value: '한국커리어혁신진흥원' },
+          { label: '훈련기간', value: '2026-06-01 ~ 진행 중' },
+        ],
+        traineeInfo: [{ label: '수료여부', value: '수료중' }],
+      },
     },
     {
+      id: 'fullstack',
       name: '클라우드활용 자바 풀스택개발자',
       org: '경영기술개발원교육센터',
       period: '2025.04 ~ 2025.11',
       status: '수료',
       statusType: 'completed',
+      detail: {
+        trainingInfo: [
+          { label: '훈련과정명', value: '클라우드활용 자바 풀스택개발자' },
+          { label: '훈련기관', value: '경영기술개발원교육센터주식회사' },
+          { label: '훈련기간', value: '2025-04-14 ~ 2025-11-19' },
+          { label: '훈련일수', value: '149일' },
+        ],
+        traineeInfo: [
+          { label: '훈련생구분', value: '실업자' },
+          { label: '수료여부', value: '정상수료' },
+          { label: '훈련참가일', value: '2025-04-14' },
+        ],
+      },
     },
     {
+      id: 'openai',
       name: 'Open AI를 엔지니어링 활용한 적응형 · 백엔드 프론티어 양성과정',
       org: '대구대학교 산학협력단',
       period: '2024.09 ~ 2025.02',
       status: '수료',
       statusType: 'completed',
+      detail: {
+        trainingInfo: [
+          {
+            label: '훈련과정명',
+            value: 'Open AI를 엔지니어링 활용한 적응형 · 백엔드 프론티어 양성과정',
+          },
+          { label: '훈련기관', value: '대구대학교 산학협력단' },
+          { label: '훈련기간', value: '2024-09-02 ~ 2025-02-21' },
+          { label: '훈련일수', value: '127일' },
+        ],
+        traineeInfo: [
+          { label: '훈련생구분', value: '실업자' },
+          { label: '수료여부', value: '정상수료' },
+          { label: '훈련참가일', value: '2024-09-02' },
+        ],
+      },
     },
   ],
   skills: [

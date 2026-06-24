@@ -1,10 +1,30 @@
+import { useEffect, useState } from 'react';
 import { profile, projects } from '../data/projects';
 import ProjectCard from '../components/ProjectCard';
 import SkillGroup from '../components/SkillGroup';
 import ResumeAttach from '../components/ResumeAttach';
+import TrainingDetailModal from '../components/TrainingDetailModal';
 import Badge from '../components/Badge';
 
 export default function Home() {
+  const [selectedTraining, setSelectedTraining] = useState(null);
+
+  useEffect(() => {
+    if (!selectedTraining) return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') setSelectedTraining(null);
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedTraining]);
+
   return (
     <>
       <section className="hero">
@@ -58,30 +78,55 @@ export default function Home() {
                     </div>
                   </li>
                 )}
-                {profile.trainings?.map((training) => (
-                  <li
-                    key={training.name}
-                    className={`edu-item${training.statusType === 'ongoing' ? ' edu-item--ongoing' : ''}`}
-                  >
-                    <div className="edu-item__head">
-                      <span className="edu-item__name">{training.name}</span>
-                      <Badge
-                        variant={
-                          training.statusType === 'ongoing'
-                            ? 'ongoing'
-                            : training.statusType === 'completed'
-                              ? 'accent'
-                              : 'default'
-                        }
-                      >
-                        {training.status}
-                      </Badge>
-                    </div>
-                    <span className="edu-item__meta">
-                      {training.org} · {training.period}
-                    </span>
-                  </li>
-                ))}
+                {profile.trainings?.map((training) => {
+                  const isClickable = Boolean(training.detail);
+                  const itemClassName = [
+                    'edu-item',
+                    training.statusType === 'ongoing' ? 'edu-item--ongoing' : '',
+                    isClickable ? 'edu-item--clickable' : '',
+                  ]
+                    .filter(Boolean)
+                    .join(' ');
+
+                  const content = (
+                    <>
+                      <div className="edu-item__head">
+                        <span className="edu-item__name">{training.name}</span>
+                        <Badge
+                          variant={
+                            training.statusType === 'ongoing'
+                              ? 'ongoing'
+                              : training.statusType === 'completed'
+                                ? 'accent'
+                                : 'default'
+                          }
+                        >
+                          {training.status}
+                        </Badge>
+                      </div>
+                      <span className="edu-item__meta">
+                        {training.org} · {training.period}
+                        {isClickable && <span className="edu-item__hint"> · 클릭하여 상세보기</span>}
+                      </span>
+                    </>
+                  );
+
+                  return (
+                    <li key={training.id ?? training.name}>
+                      {isClickable ? (
+                        <button
+                          type="button"
+                          className={itemClassName}
+                          onClick={() => setSelectedTraining(training)}
+                        >
+                          {content}
+                        </button>
+                      ) : (
+                        <div className={itemClassName}>{content}</div>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </section>
@@ -123,6 +168,11 @@ export default function Home() {
           </div>
         </section>
       </div>
+
+      <TrainingDetailModal
+        training={selectedTraining}
+        onClose={() => setSelectedTraining(null)}
+      />
     </>
   );
 }
