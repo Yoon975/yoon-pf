@@ -2,6 +2,7 @@ export const profile = {
   name: '윤영빈',
   role: '풀스택 개발자',
   email: 'tast3@naver.com',
+  photoSrc: '/yoon-pf/assets/images/profile/photo.png',
   resume: {
     href: '/yoon-pf/assets/resume/yoon-yeongbin-resume.pdf',
     title: '윤영빈 이력서',

@@ -111,6 +111,31 @@ img {
   padding: 4rem 0 3rem;
 }
 
+.hero__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1.5rem 2rem;
+}
+
+.hero__photo {
+  flex-shrink: 0;
+  width: 7.5rem;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.hero__content {
+  flex: 1;
+  min-width: min(100%, 16rem);
+}
+
 .hero__label {
   margin: 0 0 0.5rem;
   font-size: 0.75rem;

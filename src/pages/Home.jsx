@@ -7,23 +7,34 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <div className="container">
-          <p className="hero__label">Portfolio</p>
-          <h1 className="hero__name">{profile.name}</h1>
-          <p className="hero__role">{profile.role}</p>
-          {profile.education && (
-            <p className="hero__education">{profile.education}</p>
+        <div className="container hero__inner">
+          {profile.photoSrc && (
+            <img
+              className="hero__photo"
+              src={profile.photoSrc}
+              alt={`${profile.name} 프로필 사진`}
+              width={140}
+              height={175}
+            />
           )}
-          {profile.intro ? (
-            <p className="hero__intro">{profile.intro}</p>
-          ) : (
-            <p className="hero__intro hero__intro--placeholder">자기소개를 추가해 주세요.</p>
-          )}
-          <div className="hero__contact">
-            <a href={`mailto:${profile.email}`} className="hero__email">
-              {profile.email}
-            </a>
-            <ResumeAttach resume={profile.resume} />
+          <div className="hero__content">
+            <p className="hero__label">Portfolio</p>
+            <h1 className="hero__name">{profile.name}</h1>
+            <p className="hero__role">{profile.role}</p>
+            {profile.education && (
+              <p className="hero__education">{profile.education}</p>
+            )}
+            {profile.intro ? (
+              <p className="hero__intro">{profile.intro}</p>
+            ) : (
+              <p className="hero__intro hero__intro--placeholder">자기소개를 추가해 주세요.</p>
+            )}
+            <div className="hero__contact">
+              <a href={`mailto:${profile.email}`} className="hero__email">
+                {profile.email}
+              </a>
+              <ResumeAttach resume={profile.resume} />
+            </div>
           </div>
         </div>
       </section>
