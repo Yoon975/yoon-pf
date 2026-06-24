@@ -204,7 +204,7 @@ export const projects = [
     subtitle: '담당: 예약 · 데이터 수집 · Kakao 지도',
     period: '2025.10 ~ 2025.11',
     type: 'team',
-    badge: '팀 프로젝트',
+    badge: '팀 8인',
     summary:
       '공공데이터 API와 크롤링 관광지 데이터를 활용한 숙소 검색·예약·관광지 정보 플랫폼입니다.',
     stack: ['Java', 'Spring MVC', 'JSP', 'JDBC', 'MySQL', 'Kakao Maps API'],
