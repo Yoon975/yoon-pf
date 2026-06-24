@@ -32,15 +32,33 @@ export const projects = [
       '관리자 회원/콘텐츠 관리, 추천 모델 학습',
     ],
     metrics: [
-      { label: 'RF Top-3 Accuracy', value: '49.6%' },
+      { label: 'RF Top-3 Accuracy', value: '46.2%' },
       { label: 'Stage3 국가 Hit@3', value: '32.5%' },
-      { label: 'RF-only 대비 개선', value: '약 2.9배 (11.3% → 32.5%)' },
+      { label: 'RF-only 대비 개선', value: '약 2.2배 (15.0% → 32.5%)' },
     ],
+    thumbSrc: '/yoon-pf/assets/images/ourtrip/01-for-you.png',
+    heroSrc: '/yoon-pf/assets/images/ourtrip/01-for-you.png',
     gallery: [
-      { slot: 'screenshot-1', caption: '메인 홈 · For You 추천' },
-      { slot: 'screenshot-2', caption: '게시글 상세 · 댓글' },
-      { slot: 'screenshot-3', caption: '관리자 · 모델 학습' },
-      { slot: 'screenshot-4', caption: '추천 파이프라인 개요' },
+      {
+        slot: 'screenshot-1',
+        caption: 'For You · 3단계 추천 및 추천 이유',
+        src: '/yoon-pf/assets/images/ourtrip/01-for-you.png',
+      },
+      {
+        slot: 'screenshot-2',
+        caption: '게시글 상세 · 댓글/대댓글',
+        src: '/yoon-pf/assets/images/ourtrip/02-comments.png',
+      },
+      {
+        slot: 'screenshot-3',
+        caption: '관리자 · Random Forest 모델 학습',
+        src: '/yoon-pf/assets/images/ourtrip/03-admin-model.png',
+      },
+      {
+        slot: 'screenshot-4',
+        caption: '추천 모델 오프라인 평가 지표',
+        src: '/yoon-pf/assets/images/ourtrip/04-evaluate-metrics.png',
+      },
     ],
   },
   {
