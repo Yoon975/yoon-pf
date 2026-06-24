@@ -13,16 +13,25 @@ export const profile = {
     '문제를 분석하고 해결하는 과정에서 개발에 흥미를 느꼈고, 풀스택 개발자로 성장하고 있습니다. Java·Spring·JSP/Servlet과 Python, DB 설계, API 연동 경험을 바탕으로 팀 프로젝트에서 Controller·리뷰·예약·데이터 연동 등 담당 영역을 끝까지 책임지며 구현해 왔습니다. 맡은 일에 최선을 다하고, 협업 속에서 실질적인 결과를 만드는 개발자가 되고자 합니다.',
   trainings: [
     {
+      name: '실무형 AI·SW 인재 육성 Lab 사업',
+      org: '한국커리어혁신진흥원',
+      period: '2026.06 ~ 진행 중',
+      status: '수료중',
+      statusType: 'ongoing',
+    },
+    {
       name: '클라우드활용 자바 풀스택개발자',
       org: '경영기술개발원교육센터',
       period: '2025.04 ~ 2025.11',
       status: '수료',
+      statusType: 'completed',
     },
     {
       name: 'Open AI를 엔지니어링 활용한 적응형 · 백엔드 프론티어 양성과정',
       org: '대구대학교 산학협력단',
       period: '2024.09 ~ 2025.02',
       status: '수료',
+      statusType: 'completed',
     },
   ],
   skills: [

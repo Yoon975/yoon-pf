@@ -59,10 +59,23 @@ export default function Home() {
                   </li>
                 )}
                 {profile.trainings?.map((training) => (
-                  <li key={training.name} className="edu-item">
+                  <li
+                    key={training.name}
+                    className={`edu-item${training.statusType === 'ongoing' ? ' edu-item--ongoing' : ''}`}
+                  >
                     <div className="edu-item__head">
                       <span className="edu-item__name">{training.name}</span>
-                      <Badge variant="accent">{training.status}</Badge>
+                      <Badge
+                        variant={
+                          training.statusType === 'ongoing'
+                            ? 'ongoing'
+                            : training.statusType === 'completed'
+                              ? 'accent'
+                              : 'default'
+                        }
+                      >
+                        {training.status}
+                      </Badge>
                     </div>
                     <span className="edu-item__meta">
                       {training.org} · {training.period}
