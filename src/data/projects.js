@@ -120,10 +120,10 @@ export const projects = [
     github: 'https://github.com/Yoon975/ourtrip',
     role: [
       '서비스 기획부터 배포 가능 수준의 전체 단독 개발',
-      'Flask Blueprint 기반 API·페이지 라우팅, 서비스·리포지토리 계층 분리',
-      '게시글·댓글·DM·스크랩·알림 등 커뮤니티 기능 전반',
-      'Random Forest 여행지 예측 + TF-IDF·협업·LTR 기반 Stage3 랭킹 파이프라인',
-      'CSRF·scrypt·HttpOnly 세션 등 보안 처리, 관리자 대시보드·모델 학습 UI',
+      'Flask Blueprint 기반 라우팅, Service·Repository 계층 분리로 도메인 로직과 DB 접근 분리',
+      'Random Forest + TF-IDF·협업·LTR Stage3 랭킹 파이프라인 — RF-only Hit@3 15% 한계를 보완해 32.5%까지 개선',
+      'CSRF 토큰·scrypt·HttpOnly 세션 적용 — 폼 기반 인증에서 변조·세션 탈취 위험을 줄이기 위해',
+      '관리자 대시보드·추천 모델 학습 UI 구현',
     ],
     features: [
       '게시글 CRUD·다중 이미지, 댓글/대댓글, 스크랩',
@@ -174,9 +174,9 @@ export const projects = [
     stack: ['Java', 'Spring Boot', 'Spring Security', 'JPA', 'Thymeleaf', 'MySQL'],
     github: 'https://github.com/Kimminu7/OpenAI-Project',
     role: [
-      '페이지 전반의 Controller 계층 구현',
-      '게시판 — 목록·상세·작성·수정·삭제, 이미지 업로드, 좋아요',
-      '댓글·대댓글 — 작성·수정·삭제, 계층형 댓글 구조',
+      'Spring MVC Controller에서 URL별 Service 호출 후 Thymeleaf 뷰 반환',
+      '게시판 CRUD·MultipartFile 이미지 업로드, 좋아요·찜 중복 여부 검사 후 처리',
+      '댓글·대댓글 — parent_id 기준 계층 조회·등록·수정·삭제',
     ],
     features: [
       '사진 업로드·공유, 탐색·다운로드',
@@ -224,12 +224,12 @@ export const projects = [
     stack: ['Java', 'Servlet MVC', 'JSP', 'JSTL', 'MySQL', 'Tomcat', 'Swiper'],
     github: 'https://github.com/Yoon975/sweetPotato',
     role: [
-      'DB 기본 구조 설계 (회원·상품·거래·리뷰 등)',
-      '리뷰 전반 — 작성·수정·삭제, 판매자별 리뷰 전체 출력, 상품 상세 페이지 리뷰 연동',
-      '거래(판매) 시 팝업 및 거래 플로우, 서비스 로직 구현',
-      'Controller 세션 비교 기반 권한 처리',
-      '마이페이지 출력 데이터 처리',
-      'Swiper 등 외부 라이브러리 연동, CSS 작업',
+      '회원·상품·거래(deal)·리뷰 테이블 설계 — 리뷰를 deal_code로 거래 건과 연결',
+      'deal_code 기준 리뷰 등록·수정·삭제, MultipartRequest로 리뷰 이미지 업로드 — 거래 건당 하나의 리뷰만 남기기 위해',
+      '구매 시 팝업에서 택배/직거래 선택 후 deal INSERT, 상품 상태를 판매 완료로 갱신',
+      'HttpSession loginUser의 user_code와 seller_code 비교로 수정·삭제·구매 버튼 분기',
+      '거래 목록에서 EXISTS 서브쿼리로 reviewExists 표시, 판매자별 리뷰를 상품 상세에 연동',
+      'Swiper 슬라이더 연동 및 상품·리뷰 페이지 CSS 작업',
     ],
     features: [
       '지역·판매 종류(나눔·예약 등)·가격 기반 상품 검색',
@@ -259,9 +259,9 @@ export const projects = [
     stack: ['Java', 'Spring MVC', 'JSP', 'JDBC', 'MySQL', 'Kakao Maps API'],
     github: 'https://github.com/Yoon975/touring',
     role: [
-      '예약 — 예약 생성·내역 조회, 종료일 기준 지난/예정 예약 분류, 리뷰 작성 여부 표시',
-      '데이터 수집 — 호텔 데이터 전처리 및 MySQL 적재, 공공데이터 API 연동',
-      '지도 — Kakao Maps API로 숙소 위치 마커 표시',
+      'checkout 날짜와 오늘을 비교해 지난/예정 예약을 분리하고, reviewsByDno로 리뷰 작성 여부·7일 이내 작성 가능 여부를 표시 — 마이페이지에서 한눈에 구분하기 위해',
+      'JdbcTemplate + 재귀 CTE SQL로 체크인~체크아웃 기간의 잔여 객실을 검증한 뒤 deal 테이블에 예약 INSERT',
+      '숙소 상세에 Kakao Maps SDK·Places API로 주소 기반 마커 표시, Kakao Mobility API로 출발지~숙소 소요시간 계산',
     ],
     features: [
       '공공데이터 기반 숙소 목록·상세·필터링',
