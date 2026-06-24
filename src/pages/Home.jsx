@@ -1,6 +1,7 @@
 import { profile, projects } from '../data/projects';
 import ProjectCard from '../components/ProjectCard';
 import SkillGroup from '../components/SkillGroup';
+import ResumeAttach from '../components/ResumeAttach';
 
 export default function Home() {
   return (
@@ -18,9 +19,12 @@ export default function Home() {
           ) : (
             <p className="hero__intro hero__intro--placeholder">자기소개를 추가해 주세요.</p>
           )}
-          <a href={`mailto:${profile.email}`} className="hero__email">
-            {profile.email}
-          </a>
+          <div className="hero__contact">
+            <a href={`mailto:${profile.email}`} className="hero__email">
+              {profile.email}
+            </a>
+            <ResumeAttach resume={profile.resume} />
+          </div>
         </div>
       </section>
 

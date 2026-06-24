@@ -2,6 +2,11 @@ export const profile = {
   name: '윤영빈',
   role: '풀스택 개발자',
   email: 'tast3@naver.com',
+  resume: {
+    href: '/yoon-pf/assets/resume/yoon-yeongbin-resume.pdf',
+    title: '윤영빈 이력서',
+    downloadName: '윤영빈_이력서.pdf',
+  },
   education: '대구대학교 경영학과 (졸업)',
   intro:
     '문제를 분석하고 해결하는 과정에서 개발에 흥미를 느꼈고, 풀스택 개발자로 성장하고 있습니다. Java·Spring·JSP/Servlet과 Python, DB 설계, API 연동 경험을 바탕으로 팀 프로젝트에서 Controller·리뷰·예약·데이터 연동 등 담당 영역을 끝까지 책임지며 구현해 왔습니다. 맡은 일에 최선을 다하고, 협업 속에서 실질적인 결과를 만드는 개발자가 되고자 합니다.',
