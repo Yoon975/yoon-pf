@@ -28,19 +28,19 @@ export default function SideNav({ sections }) {
     return () => observer.disconnect();
   }, [sections]);
 
-  const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const scrollTo = ({ id, targetId }) => {
+    document.getElementById(targetId ?? id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (
     <nav className="side-nav" aria-label="페이지 섹션">
       <ul className="side-nav__list">
-        {sections.map(({ id, label }) => (
+        {sections.map(({ id, label, targetId }) => (
           <li key={id}>
             <button
               type="button"
               className={`side-nav__item${activeId === id ? ' side-nav__item--active' : ''}`}
-              onClick={() => scrollTo(id)}
+              onClick={() => scrollTo({ id, targetId })}
               aria-current={activeId === id ? 'true' : undefined}
             >
               <span className="side-nav__dot" aria-hidden="true" />
