@@ -1,13 +1,30 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { profile, projects } from '../data/projects';
 import ProjectCard from '../components/ProjectCard';
 import SkillGroup from '../components/SkillGroup';
 import ResumeAttach from '../components/ResumeAttach';
 import TrainingDetailModal from '../components/TrainingDetailModal';
+import SideNav from '../components/SideNav';
 import Badge from '../components/Badge';
 
 export default function Home() {
   const [selectedTraining, setSelectedTraining] = useState(null);
+
+  const navSections = useMemo(() => {
+    const sections = [{ id: 'about', label: 'About' }];
+
+    if (profile.education || profile.trainings?.length > 0) {
+      sections.push({ id: 'education', label: 'Education' });
+    }
+
+    if (profile.skills?.length > 0 || profile.learningSkills?.items?.length > 0) {
+      sections.push({ id: 'skills', label: 'Skills' });
+    }
+
+    sections.push({ id: 'projects', label: 'Projects' });
+
+    return sections;
+  }, []);
 
   useEffect(() => {
     if (!selectedTraining) return undefined;
@@ -27,7 +44,9 @@ export default function Home() {
 
   return (
     <>
-      <section className="hero">
+      <SideNav sections={navSections} />
+
+      <section className="hero" id="about">
         <div className="container">
           <div className="panel panel--hero">
             <div className="hero__inner">
