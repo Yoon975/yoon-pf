@@ -414,18 +414,14 @@ img {
 
 .skills-grid {
   display: grid;
-  gap: 1.25rem 1.5rem;
-}
-
-@media (min-width: 560px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 1.25rem;
 }
 
 @media (min-width: 840px) {
   .skills-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem 1.5rem;
   }
 }
 
@@ -439,10 +435,19 @@ img {
 }
 
 .skill-group {
-  padding: 0.75rem;
-  background: var(--bg);
-  border-radius: 6px;
-  border: 1px solid var(--border);
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+@media (min-width: 840px) {
+  .skill-group {
+    padding: 0.75rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
 }
 
 .skill-group__label {
