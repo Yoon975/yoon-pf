@@ -9,7 +9,7 @@ export default function Header() {
     <header className="header">
       <div className="container header__inner">
         <Link to="/" className="header__logo">
-          {profile.name}
+          {profile.name} 2025.08 ~ 2026.09
         </Link>
         {!isHome && (
           <Link to="/" className="header__back">
