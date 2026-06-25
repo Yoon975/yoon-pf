@@ -180,7 +180,6 @@ export default function Home() {
 
         <section className="section" id="projects">
           <h2 className="section__title">Projects</h2>
-          <p className="project-swipe-hint">좌우로 넘겨 프로젝트를 확인할 수 있습니다.</p>
           <span id="projects-list" className="section-anchor" aria-hidden="true" />
           <div className="project-grid">
             {projects.map((project) => (
