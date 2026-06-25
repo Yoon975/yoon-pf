@@ -18,7 +18,7 @@ export default function Home() {
     }
 
     if (profile.skills?.length > 0 || profile.learningSkills?.items?.length > 0) {
-      sections.push({ id: 'skills', label: 'Skills' });
+      sections.push({ id: 'skills', label: 'Skills', targetId: 'skills-list', scrollOffset: 56 });
     }
 
     sections.push({ id: 'projects', label: 'Projects', targetId: 'projects-list' });
@@ -154,6 +154,7 @@ export default function Home() {
         {(profile.skills?.length > 0 || profile.learningSkills?.items?.length > 0) && (
           <section className="section" id="skills">
             <h2 className="section__title">Skills</h2>
+            <span id="skills-list" className="section-anchor" aria-hidden="true" />
             <div className="skills-layout">
               <div className="panel skills-panel">
                 <div className="skills-grid">

@@ -28,19 +28,25 @@ export default function SideNav({ sections }) {
     return () => observer.disconnect();
   }, [sections]);
 
-  const scrollTo = ({ id, targetId }) => {
-    document.getElementById(targetId ?? id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const scrollTo = ({ id, targetId, scrollOffset = 0 }) => {
+    const element = document.getElementById(targetId ?? id);
+    if (!element) return;
+
+    const headerOffset = 72;
+    const top = element.getBoundingClientRect().top + window.scrollY - headerOffset + scrollOffset;
+
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
   };
 
   return (
     <nav className="side-nav" aria-label="페이지 섹션">
       <ul className="side-nav__list">
-        {sections.map(({ id, label, targetId }) => (
+        {sections.map(({ id, label, targetId, scrollOffset }) => (
           <li key={id}>
             <button
               type="button"
               className={`side-nav__item${activeId === id ? ' side-nav__item--active' : ''}`}
-              onClick={() => scrollTo({ id, targetId })}
+              onClick={() => scrollTo({ id, targetId, scrollOffset })}
               aria-current={activeId === id ? 'true' : undefined}
             >
               <span className="side-nav__dot" aria-hidden="true" />
