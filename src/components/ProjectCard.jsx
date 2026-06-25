@@ -25,7 +25,7 @@ export default function ProjectCard({ project }) {
         <p className="project-card__summary">{project.summary}</p>
         <p className="project-card__period">{project.period}</p>
         <ul className="tag-list">
-          {project.stack.slice(0, 5).map((tech) => (
+          {project.stack.map((tech) => (
             <li key={tech} className="tag">{tech}</li>
           ))}
         </ul>

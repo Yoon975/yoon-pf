@@ -589,10 +589,6 @@ img {
     -webkit-line-clamp: 2;
   }
 
-  .project-card .tag-list li:nth-child(n + 5) {
-    display: none;
-  }
-
   .project-card__actions {
     margin-top: 0.875rem;
   }
