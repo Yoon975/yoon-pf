@@ -9,8 +9,9 @@ export default function Header() {
     <header className="header">
       <div className="container header__inner">
         <Link to="/" className="header__logo">
-          {profile.name} 2025.08 ~ 2026.09
+          {profile.name}
         </Link>
+        <p> 2025.08 ~ 2026.09</p>
         {!isHome && (
           <Link to="/" className="header__back">
             프로젝트 목록
