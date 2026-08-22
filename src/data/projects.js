@@ -161,7 +161,7 @@ export const projects = [
     subtitle: '담당: BE 데이터·안전등급 배치 · 웹 지도 · Flutter 앱',
     period: '2026.07 ~ 2026.08',
     type: 'team',
-    badge: '팀 3조',
+    badge: '팀 5인',
     summary:
       '0.01° 격자 기반 안전등급 지도와 CCTV·경찰·소방 인프라, KOROAD 사고다발구역, 제보·피드백을 웹·앱에서 제공하는 공공안전 플랫폼입니다.',
     stack: [
