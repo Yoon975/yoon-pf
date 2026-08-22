@@ -178,7 +178,7 @@ export const projects = [
     ],
     github: 'https://github.com/Yoon975/public_safety_map_web',
     role: [
-      'CCTV·경찰·소방·편의점 CSV 적재 — 좌표계 변환·동일좌표 중복 스킵, Grid API·JWT 인증 검증',
+      'CCTV·경찰·소방·편의점 CSV 적재 — 좌표계 변환·동일좌표 중복 스킵, Grid API 구축',
       '격자 0.01° 재적재 및 FE/BE 맞춤, city-events is_active 필터 수정',
       '안전등급 배치(runScore/scoreOps/weights) — 시설 baseline + 제보 감점 → strength 상대 3분위 등급, node-cron 매일 00시 KST',
       'Kakao Maps + mapStore — /grids 격자 Polygon·/infrastructures 타입별 마커·토글·축소 상한',
@@ -191,10 +191,8 @@ export const projects = [
       '0.01° 격자 안전등급(안전·보통·불안) 지도 표시',
       'CCTV·경찰·소방·편의점 인프라 마커·필터',
       'KOROAD 보행·자전거·이륜·어린이보호 사고다발구역',
-      '위치 기반 제보·행사, YuNet 얼굴 마스킹',
+      '위치 기반 제보·행사',
       '체감안전도 피드백 태그',
-      'JWT 로그인·마이페이지',
-      '관리자 콘솔(제보·피드백·행사 관리)',
       'FCM 알림·TMAP 보행 길안내·오프라인 캐시(앱)',
     ],
     metrics: null,
@@ -203,13 +201,13 @@ export const projects = [
     gallery: [
       {
         slot: 'screenshot-1',
-        caption: '로그인·회원가입 (JWT Access/Refresh)',
-        src: '/yoon-pf/assets/images/safey/01-auth.png',
+        caption: '안전강도 risk_pipeline — 데이터·전처리·모델',
+        src: '/yoon-pf/assets/images/safey/02-ai-pipeline.png',
       },
       {
         slot: 'screenshot-2',
-        caption: '안전강도 risk_pipeline — 데이터·전처리·모델',
-        src: '/yoon-pf/assets/images/safey/02-ai-pipeline.png',
+        caption: 'Kakao Maps 격자·인프라·사고다발구역 지도',
+        src: '/yoon-pf/assets/images/safey/04-features.png',
       },
       {
         slot: 'screenshot-3',
@@ -218,8 +216,7 @@ export const projects = [
       },
       {
         slot: 'screenshot-4',
-        caption: '전체 기능 요약 (웹·앱)',
-        src: '/yoon-pf/assets/images/safey/04-features.png',
+        caption: 'Flutter 앱 지도·제보·네비 UI',
       },
     ],
   },
