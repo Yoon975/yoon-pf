@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# PDF slide extraction temp
+public/assets/images/safey/_pdf_extract/
