@@ -89,7 +89,7 @@ export const profile = {
     },
     {
       label: 'Python',
-      items: ['Python', 'Pandas', 'NumPy', 'Beautiful Soup', 'requests', 'matplotlib', 'TensorFlow'],
+      items: ['Python', 'Pandas', 'NumPy', 'Beautiful Soup', 'requests', 'matplotlib', 'TensorFlow', 'Flask', 'scikit-learn', 'Jinja2'],
     },
     {
       label: 'Library / API',
@@ -100,10 +100,6 @@ export const profile = {
       items: ['Eclipse/STS', 'VS Code', 'PyCharm', 'MySQL Workbench'],
     },
   ],
-  learningSkills: {
-    context: 'Our Trip',
-    items: ['Flask', 'scikit-learn', 'Jinja2'],
-  },
 };
 
 export const projects = [
@@ -227,9 +223,8 @@ export const projects = [
     id: 'ourtrip',
     title: 'Our Trip',
     subtitle: '단독 개발 · 전체 설계 및 구현',
-    period: '2026.06 ~ 진행 중',
+    period: '2026.06',
     type: 'solo',
-    badge: '진행 중',
     summary:
       'ML 기반 For You 추천이 있는 여행 기록 커뮤니티 웹 애플리케이션입니다.',
     stack: ['Python', 'Flask', 'MySQL', 'scikit-learn', 'Jinja2', 'Vanilla JS'],
