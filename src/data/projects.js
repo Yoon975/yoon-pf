@@ -137,11 +137,24 @@ export const projects = [
       '프로그램·데이터 분리 및 exe 배포',
     ],
     metrics: null,
+    thumbSrc: '/yoon-pf/assets/images/hana-taxi/01-ai-chat.png',
+    heroSrc: '/yoon-pf/assets/images/hana-taxi/01-ai-chat.png',
     gallery: [
-      { slot: 'screenshot-1', caption: 'AI 채팅 · 미리보기 후 적용' },
-      { slot: 'screenshot-2', caption: '배차일지 · 월별 xlsx' },
-      { slot: 'screenshot-3', caption: 'TIMS 수익 반영·초과지급' },
-      { slot: 'screenshot-4', caption: '시급·초과금 설정' },
+      {
+        slot: 'screenshot-1',
+        caption: 'AI 채팅 · 차량/기사 마스터',
+        src: '/yoon-pf/assets/images/hana-taxi/01-ai-chat.png',
+      },
+      {
+        slot: 'screenshot-2',
+        caption: '배차일지 · Teams 수익 반영',
+        src: '/yoon-pf/assets/images/hana-taxi/02-dispatch-log.png',
+      },
+      {
+        slot: 'screenshot-3',
+        caption: '시급·초과금 설정',
+        src: '/yoon-pf/assets/images/hana-taxi/03-wage-settings.png',
+      },
     ],
   },
   {
