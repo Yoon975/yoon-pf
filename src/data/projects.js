@@ -104,6 +104,47 @@ export const profile = {
 
 export const projects = [
   {
+    id: 'hana-taxi',
+    title: 'HANA-TAXI',
+    subtitle: '단독 개발 · Streamlit 데스크톱 · 업무 자동화',
+    period: '2026.09 ~ 진행 중',
+    type: 'solo',
+    badge: '진행 중',
+    summary:
+      '택시 회사 배차일지·차량/기사 마스터·TIMS 수익 반영·공문 초안·Gemini AI 채팅을 지원하는 Streamlit 데스크톱 앱입니다. 현재 개발 진행 중이며 미완성 상태입니다.',
+    stack: [
+      'Python',
+      'Streamlit',
+      'pandas',
+      'openpyxl',
+      'Google Gemini',
+      'PyInstaller',
+    ],
+    github: 'https://github.com/Yoon975/HANA-TAXI',
+    role: [
+      'Streamlit 멀티탭 UI·프로그램/데이터 경로 분리 설계 (문서\\택시자동화)',
+      '배차일지 월별 xlsx·영업일 06시 기준·제출용 xlsx/HWP 내보내기',
+      'TIMS 수익 엑셀 반영 — 차량별 당월수익·초과지급, 무운행/0원 휴차 처리',
+      '시급·초과금 설정 — 전원 동일 시급, 월수입 기준액 초과 시 지급비율 적용',
+      'Gemini AI 채팅 — 차량·기사 등록, 배차일지 기입, 공문 초안 (미리보기 후 적용)',
+      'PyInstaller onedir로 TaxiApp.exe 배포 패키징',
+    ],
+    features: [
+      'AI 채팅으로 차량·기사 등록·배차일지·공문 초안',
+      '월별 배차일지 작성·제출용 내보내기',
+      'TIMS 수익 엑셀 반영·초과지급 계산',
+      '시급·초과금 설정 변경',
+      '프로그램·데이터 분리 및 exe 배포',
+    ],
+    metrics: null,
+    gallery: [
+      { slot: 'screenshot-1', caption: 'AI 채팅 · 미리보기 후 적용' },
+      { slot: 'screenshot-2', caption: '배차일지 · 월별 xlsx' },
+      { slot: 'screenshot-3', caption: 'TIMS 수익 반영·초과지급' },
+      { slot: 'screenshot-4', caption: '시급·초과금 설정' },
+    ],
+  },
+  {
     id: 'floop',
     title: 'Floop Prediction Web',
     subtitle: '단독 개발 · Full-Stack · Dual-track ML',
